@@ -388,7 +388,7 @@ function Enable-TeslaVehicleRemoteStart {
         .EXAMPLE
         The following turns on remote start for vehicle with WIN '1232456'.
         
-        $credential = Get-Credentail
+        $credential = Get-credential
         $token = Get-TeslaToken
         $vehicle = Get-TeslaVehicles -Token $token | Where-Object {$_.vin -eq "5YJSB7E46GF123456"}
         Enable-TeslaVehicleRemoteStart -Vehicle $vehicle -Token $token -Credential $credential
