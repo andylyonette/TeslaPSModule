@@ -87,6 +87,15 @@ Eg. `Get-Help Set-TeslaVehicleClimateControlTemprature -Detailed` or `Get-Help S
 
 
 
+## Change Log
+### 1.0.1
+* Updated spelling mistake in content-based help as per issue #1
+
+### 1.0
+* Initial release
+
+
+
 ## Notes
 Inspiration drawn from:
 * http://docs.timdorr.apiary.io/#reference/vehicle-commands/set-temperature/set-temperature
