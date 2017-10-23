@@ -49,7 +49,7 @@ Eg. `Get-Help Set-TeslaVehicleClimateControlTemprature -Detailed` or `Get-Help S
 * Enable-TeslaVehicleValetMode
 * Get-TeslaVehicleSummary
 * Invoke-TeslaVehicleCommand
-* Invoke-TeslaVehicleHornHonk
+* Invoke-TeslaVehicleHorn
 * Invoke-TeslaVehicleLightsFlash
 * Invoke-TeslaVehicleWakeUp
 * Lock-TeslaVehicle
