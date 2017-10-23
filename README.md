@@ -1,4 +1,4 @@
-# Tesla PowerShell Module
+# Tesla PowerShell Module 1.0.1
 Interact with your Tesla Model S, X or 3 using PowerShell over the Tesla customer API
 
 ## Prerequisites
