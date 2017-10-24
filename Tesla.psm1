@@ -638,10 +638,10 @@ function Get-TeslaVehicles {
     #>
     [CmdletBinding()]
     param(
-        [Parameter(Position = 0, Mandatory, ValueFromPipeline)]
+        [Parameter(Position=0,Mandatory,ValueFromPipeline)]
         [PSCustomObject]$Token,
 
-        [Parameter(Position = 1, ValueFromPipeline)]
+        [Parameter(Position=1,ValueFromPipeline)]
         [string]$ApiUri = "https://owner-api.teslamotors.com/api/1"
     )
 
@@ -656,7 +656,7 @@ function Get-TeslaVehicles {
         }
     
         $Headers = @{
-            "Authorization"   = "Bearer $Token"
+            "Authorization" = "Bearer $Token"
             "Accept-Encoding" = "gzip,deflate"
         }
 
