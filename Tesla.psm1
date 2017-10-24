@@ -350,7 +350,7 @@ function Disable-TeslaVehicleValetMode {
     PROCESS {
 
         Write-Verbose "Executing 'set_valet_mode' with paraetmers 'on'=$false"
-        Invoke-TeslaVehicleCommand -Vehicle $Vehicle -Token $Token -Command set_valet_mode-Body "{`"on`":`"false`"}"
+        Invoke-TeslaVehicleCommand -Vehicle $Vehicle -Token $Token -Command set_valet_mode -Body "{`"on`":`"false`"}"
           
     } #PROCESS
 
@@ -494,7 +494,7 @@ function Enable-TeslaVehicleValetMode {
 
         [Parameter(Position=2,ValueFromPipeline)]
         [ValidateScript({
-            if ([int]$pin -ge 0 -and [int]$pin -le 9999) {
+            if ([int]$_ -ge 0 -and [int]$_ -le 9999) {
                 $True
             } else {
                 throw "$_ is not between '0000' and '9999'."
