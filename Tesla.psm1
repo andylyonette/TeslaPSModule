@@ -73,7 +73,7 @@
             $Token = $Token.access_token
         }
     
-        $Headers =  @{
+        $Headers = @{
             "Authorization" = "Bearer $Token"
             "Accept-Encoding" = "gzip,deflate"
         }
@@ -227,7 +227,7 @@ function Close-TeslaVehicleSunroof {
 
     PROCESS {
 
-        Write-Verbose "Executing 'sun_roof_control' with paraetmers 'state'=close"
+        Write-Verbose "Executing 'sun_roof_control' with parameters 'state'=close"
         Invoke-TeslaVehicleCommand -Vehicle $Vehicle -Token $Token -Command sun_roof_control -Body "{`"state`":`"close`"}"
           
     } #PROCESS
@@ -244,7 +244,7 @@ function ConvertFrom-TeslaTimeStamp {
         Converts a Tesla timestamp to a human-readable form.
       
         .DESCRIPTION
-        Converts the timestamp property value of the various states (eg. 'climate_state', 'vehicle_state') returned from Tesla API data requests.
+        Converts the timestamp property value of the various states (e.g. 'climate_state', 'vehicle_state') returned from Tesla API data requests.
 
         .PARAMETER Timestamp
         A valid Tesla vehicle.  This can be obtained using the 'Get-TeslaVehicles' cmdlet.  Instead of supplying an entire Tesla vehicle object just the 'id' from the vehicle (this not the 'vehicle_id' or 'vin') can be supplied instead.
@@ -349,7 +349,7 @@ function Disable-TeslaVehicleValetMode {
 
     PROCESS {
 
-        Write-Verbose "Executing 'set_valet_mode' with paraetmers 'on'=$false"
+        Write-Verbose "Executing 'set_valet_mode' with parameters 'on'=$false"
         Invoke-TeslaVehicleCommand -Vehicle $Vehicle -Token $Token -Command set_valet_mode -Body "{`"on`":`"false`"}"
           
     } #PROCESS
@@ -363,10 +363,10 @@ function Disable-TeslaVehicleValetMode {
 function Enable-TeslaVehicleRemoteStart {
     <#
         .SYNOPSIS
-        Turns on remote start for for a Tesla vehicle.
+        Turns on remote start for a Tesla vehicle.
       
         .DESCRIPTION
-        Turns on remote start for 2 minutes  for a Tesla vehicle.  If remote start is already enabled the operation will fail.
+        Turns on remote start for 2 minutes for a Tesla vehicle.  If remote start is already enabled the operation will fail.
 
         .PARAMETER Vehicle
         A valid Tesla vehicle.  This can be obtained using the 'Get-TeslaVehicles' cmdlet.  Instead of supplying an entire Tesla vehicle object just the 'id' from the vehicle (this not the 'vehicle_id' or 'vin') can be supplied instead.
@@ -425,7 +425,7 @@ function Enable-TeslaVehicleRemoteStart {
 
     PROCESS {
 
-        Write-Verbose "Executing 'remote_start_drive' with paraetmers 'password'=<NotDisplayed>"
+        Write-Verbose "Executing 'remote_start_drive' with parameters 'password'=<NotDisplayed>"
         Invoke-TeslaVehicleCommand -Vehicle $Vehicle -Token $Token -Command remote_start_drive -Body "{`"password`":`"$($Credential.GetNetworkCredential().password)`"}"
           
     } #PROCESS
@@ -442,7 +442,7 @@ function Enable-TeslaVehicleValetMode {
         Turns on valet mode for a Tesla vehicle.
       
         .DESCRIPTION
-        Turns onn valet mode for a Tesla vehicle.  If valet mode is already enabled the operation will fail.
+        Turns on valet mode for a Tesla vehicle.  If valet mode is already enabled the operation will fail.
 
         .PARAMETER Vehicle
         A valid Tesla vehicle.  This can be obtained using the 'Get-TeslaVehicles' cmdlet.  Instead of supplying an entire Tesla vehicle object just the 'id' from the vehicle (this not the 'vehicle_id' or 'vin') can be supplied instead.
@@ -514,12 +514,12 @@ function Enable-TeslaVehicleValetMode {
 
         if ($pin) {
 
-            Write-Verbose "Executing 'set_valet_mode' with paraetmers 'on'=$true, 'password'=$pin"
+            Write-Verbose "Executing 'set_valet_mode' with parameters 'on'=$true, 'password'=$pin"
             Invoke-TeslaVehicleCommand -Vehicle $Vehicle -Token $Token -Command set_valet_mode -Body "{`"on`":`"true`",`"password`":`"$pin`"}"
 
         } else {
 
-            Write-Verbose "Executing 'set_valet_mode' with paraetmers 'on'=$true"
+            Write-Verbose "Executing 'set_valet_mode' with parameters 'on'=$true"
             Invoke-TeslaVehicleCommand -Vehicle $Vehicle -Token $Token -Command set_valet_mode-Body "{`"on`":`"true`"}"
 
         }
@@ -655,7 +655,7 @@ function Get-TeslaVehicles {
             $Token = $Token.access_token
         }
     
-        $Headers =  @{
+        $Headers = @{
             "Authorization" = "Bearer $Token"
             "Accept-Encoding" = "gzip,deflate"
         }
@@ -683,7 +683,7 @@ function Get-TeslaVehicleSummary {
         Retrieves the state of a Tesla vehicle.
       
         .DESCRIPTION
-        Retrieves the state of a Tesla vehicle.  Further detail is availabe under the properties 'gui_settings', 'cliemate_state', 'vehicle_state', 'charge_state' and 'drive_state'
+        Retrieves the state of a Tesla vehicle.  Further detail is available under the properties 'gui_settings', 'cliemate_state', 'vehicle_state', 'charge_state' and 'drive_state'
 
         .PARAMETER Vehicle
         A valid Tesla vehicle.  This can be obtained using the 'Get-TeslaVehicles' cmdlet.  Instead of supplying an entire Tesla vehicle object just the 'id' from the vehicle (this not the 'vehicle_id' or 'vin') can be supplied instead.
@@ -745,7 +745,7 @@ function Get-TeslaVehicleSummary {
             $Token = $Token.access_token
         }
 
-        $Headers =  @{
+        $Headers = @{
             "Authorization" = "Bearer $Token"
             "Accept-Encoding" = "gzip,deflate"
         }
@@ -1166,7 +1166,7 @@ function Open-TeslaVehicleSunroofVent {
 
     PROCESS {
 
-        Write-Verbose "Executing 'sun_roof_control' with paraetmers 'state'=vent"
+        Write-Verbose "Executing 'sun_roof_control' with parameters 'state'=vent"
         Invoke-TeslaVehicleCommand -Vehicle $Vehicle -Token $Token -Command sun_roof_control -Body "{`"state`":`"vent`"}"
           
     } #PROCESS
@@ -1260,8 +1260,8 @@ function Set-TeslaVehicleChargeLimit {
         .PARAMETER Token
         A valid MyTesla token with access to the specified vehicle.  This can be obtained using the 'Get-TeslaToken' cmdlet. Instead of supplying an entire Tesla token object just the 'access_token' from the token can be supplied instead.
                 
-        .PARAMETER ChageLimit
-        An integer between 50 and 100 (inclusive) denoting the percentage charge limit for the verhicle battery.
+        .PARAMETER ChargeLimit
+        An integer between 50 and 100 (inclusive) denoting the percentage charge limit for the vehicle battery.
                 
         .PARAMETER ApiUri
         The URI for the Tesla public customer API.  If not specified then 'https://owner-api.teslamotors.com/api/1' will be used.
@@ -1311,7 +1311,7 @@ function Set-TeslaVehicleChargeLimit {
 
     PROCESS {
 
-        Write-Verbose "Executing 'set_charge_limit' with paraetmers 'percent'=$ChargeLimit"
+        Write-Verbose "Executing 'set_charge_limit' with parameters 'percent'=$ChargeLimit"
         Invoke-TeslaVehicleCommand -Vehicle $Vehicle -Token $Token -Command set_charge_limit -Body "{`"percent`":$ChargeLimit}"
           
     } #PROCESS
@@ -1351,7 +1351,7 @@ function Set-TeslaVehicleClimateControlTemperature {
         Set-TeslaVehicleClimateControlTemperature -Vehicle 12345678901234567 -Token 1234567890123456789012345678901234567890123456789012345678901234 -DriverTemp 20
       
         .EXAMPLE
-        Sets the driver-side temperature to 20 degrees Celsius and passenger-side temperature to 78 degreees Fahrenheit for vehicle with WIN '1232456'.
+        Sets the driver-side temperature to 20 degrees Celsius and passenger-side temperature to 78 degrees Fahrenheit for vehicle with WIN '1232456'.
         
         $token = Get-TeslaToken
         $vehicle = Get-TeslaVehicles -Token $token | Where-Object {$_.vin -eq "5YJSB7E46GF123456"}
@@ -1412,7 +1412,7 @@ function Set-TeslaVehicleClimateControlTemperature {
             Write-Verbose "DriverTemp specified in Fahrenheit, converting to Celsius"
             [decimal]$DriverTemp2 = [int](($DriverTemp - 32) * (5 / 9))
             Write-Verbose "DriverTemp in Celsius: $DriverTemp2"
-            [string]$DriverTemp =  [math]::Round($DriverTemp2)
+            [string]$DriverTemp = [math]::Round($DriverTemp2)
         }
 
         if ($PassengerTemp -le 28) {
@@ -1421,7 +1421,7 @@ function Set-TeslaVehicleClimateControlTemperature {
             Write-Verbose "PassengerTemp specified in Fahrenheit, converting to Celsius"
             [decimal]$PassengerTemp2 = [int](($PassengerTemp - 32) * (5 / 9))
             Write-Verbose "PassengerTemp in Celsius: $PassengerTemp2"
-            [string]$PassengerTemp =  [math]::Round($PassengerTemp2)
+            [string]$PassengerTemp = [math]::Round($PassengerTemp2)
         }
 
         if (!$DriverTemp -and !$PassengerTemp) {
@@ -1435,7 +1435,7 @@ function Set-TeslaVehicleClimateControlTemperature {
                     $Token = $Token.access_token
                 }
     
-                $Headers =  @{
+                $Headers = @{
                     "Authorization" = "Bearer $Token"
                     "Accept-Encoding" = "gzip,deflate"
                 }
@@ -1453,7 +1453,7 @@ function Set-TeslaVehicleClimateControlTemperature {
                 }
             }
 
-            Write-Verbose "Executing 'set_temps' with paraetmers 'driver_temp'=$DriverTemp, 'passenger_temp'=$PassengerTemp"
+            Write-Verbose "Executing 'set_temps' with parameters 'driver_temp'=$DriverTemp, 'passenger_temp'=$PassengerTemp"
             Invoke-TeslaVehicleCommand -Vehicle $Vehicle -Token $Token -Command set_temps -Body "{`"driver_temp`":$DriverTemp,`"passenger_temp`":$PassengerTemp}"
 
         }
@@ -1762,19 +1762,19 @@ function Unlock-TeslaVehicle {
         .EXAMPLE
         Unlock vehicle ID '12345678901234567' using access token '1234567890123456789012345678901234567890123456789012345678901234'.
     
-        Unock-TeslaVehicle -Vehicle 12345678901234567 -Token 1234567890123456789012345678901234567890123456789012345678901234
+        Unlock-TeslaVehicle -Vehicle 12345678901234567 -Token 1234567890123456789012345678901234567890123456789012345678901234
       
         .EXAMPLE
-        Unock vehicle with WIN '1232456'.
+        Unlock vehicle with WIN '1232456'.
         
         $token = Get-TeslaToken
         $vehicle = Get-TeslaVehicles -Token $token | Where-Object {$_.vin -eq "5YJSB7E46GF123456"}
-        Unock-TeslaVehicle -Vehicle $vehicle -Token $token
+        Unlock-TeslaVehicle -Vehicle $vehicle -Token $token
       
         .EXAMPLE
         Unlock vehicle ID 12345678901234567 using access token '1234567890123456789012345678901234567890123456789012345678901234' using API URI 'https://test.mymockteslaapi.com/api'
     
-        Unock-TeslaVehicle -Vehicle 12345678901234567 -Token 1234567890123456789012345678901234567890123456789012345678901234 -ApiUri https://test.mymockteslaapi.com/api
+        Unlock-TeslaVehicle -Vehicle 12345678901234567 -Token 1234567890123456789012345678901234567890123456789012345678901234 -ApiUri https://test.mymockteslaapi.com/api
       
         .LINK
                 https://github.com/andylyonette/TeslaPSModulePSModulePSModulePSModulePSModulePSModule
