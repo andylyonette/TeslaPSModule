@@ -38,7 +38,7 @@ Pipeline support is implemented in each of the cmdlets so you could also use:
 ### Cmdlet Reference
 The following cmdlets are available in the module complete with full comment-based help.  In order to find out more about any cmdlet use the Get-Help cmdlet.
 
-Eg. `Get-Help Set-TeslaVehicleClimateControlTemprature -Detailed` or `Get-Help Set-TeslaVehicleClimateControlTemprature -Examples`
+Eg. `Get-Help Set-TeslaVehicleClimateControlTemperature -Detailed` or `Get-Help Set-TeslaVehicleClimateControlTemperature -Examples`
 
 
 #### Vehicle cmdlets
