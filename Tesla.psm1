@@ -135,7 +135,7 @@ function Close-TeslaVehicleChargePortDoor {
         Close-TeslaVehicleChargePortDoor -Vehicle 12345678901234567 -Token 1234567890123456789012345678901234567890123456789012345678901234 -ApiUri https://test.mymockteslaapi.com/api
       
         .LINK
-                https://github.com/andylyonette/TeslaPSModulePSModulePSModulePSModulePSModulePSModule
+                https://github.com/andylyonette/TeslaPSModule
         
         .OUTPUTS
         <System.Boolean>
@@ -204,7 +204,7 @@ function Close-TeslaVehicleSunroof {
         Close-TeslaVehicleSunroof -Vehicle 12345678901234567 -Token 1234567890123456789012345678901234567890123456789012345678901234 -ApiUri https://test.mymockteslaapi.com/api
       
         .LINK
-                https://github.com/andylyonette/TeslaPSModulePSModulePSModulePSModulePSModulePSModule
+                https://github.com/andylyonette/TeslaPSModule
         
         .OUTPUTS
         <System.Boolean>
@@ -263,7 +263,7 @@ function ConvertFrom-TeslaTimeStamp {
         $vehicleData.vehicle_state | ConvertFrom-TeslaTimeStamp
       
         .LINK
-                https://github.com/andylyonette/TeslaPSModulePSModulePSModulePSModulePSModulePSModule
+                https://github.com/andylyonette/TeslaPSModule
         
         .OUTPUTS
         <System.Boolean>
@@ -326,7 +326,7 @@ function Disable-TeslaVehicleValetMode {
         Disable-TeslaVehicleValetMode -Vehicle 12345678901234567 -Token 1234567890123456789012345678901234567890123456789012345678901234 -ApiUri https://test.mymockteslaapi.com/api
       
         .LINK
-                https://github.com/andylyonette/TeslaPSModulePSModulePSModulePSModulePSModulePSModule
+                https://github.com/andylyonette/TeslaPSModule
         
         .OUTPUTS
         <System.Boolean>
@@ -399,7 +399,7 @@ function Enable-TeslaVehicleRemoteStart {
         Enable-TeslaVehicleRemoteStart -Vehicle 12345678901234567 -Token 1234567890123456789012345678901234567890123456789012345678901234 -ApiUri https://test.mymockteslaapi.com/api -Credential (Get-Credential)
       
         .LINK
-                https://github.com/andylyonette/TeslaPSModulePSModulePSModulePSModulePSModulePSModule
+                https://github.com/andylyonette/TeslaPSModule
         
         .OUTPUTS
         <System.Boolean>
@@ -479,7 +479,7 @@ function Enable-TeslaVehicleValetMode {
         Enable-TeslaVehicleValetMode -Vehicle 12345678901234567 -Token 1234567890123456789012345678901234567890123456789012345678901234 -ApiUri https://test.mymockteslaapi.com/api
       
         .LINK
-                https://github.com/andylyonette/TeslaPSModulePSModulePSModulePSModulePSModulePSModule
+                https://github.com/andylyonette/TeslaPSModule
         
         .OUTPUTS
         <System.Boolean>
@@ -552,7 +552,7 @@ function Get-TeslaToken {
         Get-TeslaToken -Credential (Get-Credential)
             
         .LINK
-                https://github.com/andylyonette/TeslaPSModulePSModulePSModulePSModulePSModulePSModule
+                https://github.com/andylyonette/TeslaPSModule
         
         .OUTPUTS
         <System.RuntimeType>
@@ -631,8 +631,8 @@ function Get-TeslaVehicles {
         Get-TeslaVehicles -Token $token | Where-Object {$_.vin -eq "5YJSB7E46GF123456"}
             
         .LINK
-                https://github.com/andylyonette/TeslaPSModulePSModulePSModulePSModulePSModulePSModule
-        
+                https://github.com/andylyonette/TeslaPSModule
+                
         .OUTPUTS
         <System.RuntimeType>
     #>
@@ -712,7 +712,7 @@ function Get-TeslaVehicleSummary {
         Get-TeslaVehicleSummary -Vehicle 12345678901234567 -Token 1234567890123456789012345678901234567890123456789012345678901234 -ApiUri https://test.mymockteslaapi.com/api
       
         .LINK
-                https://github.com/andylyonette/TeslaPSModulePSModulePSModulePSModulePSModulePSModule
+                https://github.com/andylyonette/TeslaPSModule
         
         .OUTPUTS
         <System.RuntimeType>
@@ -798,7 +798,7 @@ function Invoke-TeslaVehicleHorn {
         Invoke-TeslaVehicleHorn -Vehicle 12345678901234567 -Token 1234567890123456789012345678901234567890123456789012345678901234 -ApiUri https://test.mymockteslaapi.com/api
       
         .LINK
-                https://github.com/andylyonette/TeslaPSModulePSModulePSModulePSModulePSModulePSModule
+                https://github.com/andylyonette/TeslaPSModule
         
         .OUTPUTS
         <System.Boolean>
@@ -867,7 +867,7 @@ function Invoke-TeslaVehicleLightsFlash {
         Invoke-TeslaVehicleLightsFlash -Vehicle 12345678901234567 -Token 1234567890123456789012345678901234567890123456789012345678901234 -ApiUri https://test.mymockteslaapi.com/api
       
         .LINK
-                https://github.com/andylyonette/TeslaPSModulePSModulePSModulePSModulePSModulePSModule
+                https://github.com/andylyonette/TeslaPSModule
         
         .OUTPUTS
         <System.Boolean>
@@ -936,7 +936,7 @@ function Invoke-TeslaVehicleWakeUp {
         Invoke-TeslaVehicleWakeUp -Vehicle 12345678901234567 -Token 1234567890123456789012345678901234567890123456789012345678901234 -ApiUri https://test.mymockteslaapi.com/api
       
         .LINK
-                https://github.com/andylyonette/TeslaPSModulePSModulePSModulePSModulePSModulePSModule
+                https://github.com/andylyonette/TeslaPSModule
         
         .OUTPUTS
         <System.Boolean>
@@ -1005,7 +1005,7 @@ function Lock-TeslaVehicle {
         Lock-TeslaVehicle -Vehicle 12345678901234567 -Token 1234567890123456789012345678901234567890123456789012345678901234 -ApiUri https://test.mymockteslaapi.com/api
       
         .LINK
-                https://github.com/andylyonette/TeslaPSModulePSModulePSModulePSModulePSModulePSModule
+                https://github.com/andylyonette/TeslaPSModule
         
         .OUTPUTS
         <System.Boolean>
@@ -1074,7 +1074,7 @@ function Open-TeslaVehicleChargePortDoor {
         Open-TeslaVehicleChargePortDoor -Vehicle 12345678901234567 -Token 1234567890123456789012345678901234567890123456789012345678901234 -ApiUri https://test.mymockteslaapi.com/api
       
         .LINK
-                https://github.com/andylyonette/TeslaPSModulePSModulePSModulePSModulePSModulePSModule
+                https://github.com/andylyonette/TeslaPSModule
         
         .OUTPUTS
         <System.Boolean>
@@ -1143,7 +1143,7 @@ function Open-TeslaVehicleSunroofVent {
         Open-TeslaVehicleSunroofVent -Vehicle 12345678901234567 -Token 1234567890123456789012345678901234567890123456789012345678901234 -ApiUri https://test.mymockteslaapi.com/api
       
         .LINK
-                https://github.com/andylyonette/TeslaPSModulePSModulePSModulePSModulePSModulePSModule
+                https://github.com/andylyonette/TeslaPSModule
         
         .OUTPUTS
         <System.Boolean>
@@ -1212,7 +1212,7 @@ function Remove-TeslaVehicleValetModePin {
         Remove-TeslaVehicleValetModePin -Vehicle 12345678901234567 -Token 1234567890123456789012345678901234567890123456789012345678901234 -ApiUri https://test.mymockteslaapi.com/api
       
         .LINK
-                https://github.com/andylyonette/TeslaPSModulePSModulePSModulePSModulePSModulePSModule
+                https://github.com/andylyonette/TeslaPSModule
         
         .OUTPUTS
         <System.Boolean>
@@ -1284,7 +1284,7 @@ function Set-TeslaVehicleChargeLimit {
         Set-TeslaVehicleChargeLimit -Vehicle 12345678901234567 -Token 1234567890123456789012345678901234567890123456789012345678901234 -ChargeLimit 80 -ApiUri https://test.mymockteslaapi.com/api
       
         .LINK
-                https://github.com/andylyonette/TeslaPSModulePSModulePSModulePSModulePSModulePSModule
+                https://github.com/andylyonette/TeslaPSModule
         
         .OUTPUTS
         <System.Boolean>
@@ -1363,7 +1363,7 @@ function Set-TeslaVehicleClimateControlTemperature {
         Set-TeslaVehicleClimateControlTemperature -Vehicle 12345678901234567 -Token 1234567890123456789012345678901234567890123456789012345678901234 -DriverTemp 16.5 -PassengerTemp 20 -ApiUri https://test.mymockteslaapi.com/api
       
         .LINK
-                https://github.com/andylyonette/TeslaPSModulePSModulePSModulePSModulePSModulePSModule
+                https://github.com/andylyonette/TeslaPSModule
         
         .OUTPUTS
         <System.Boolean>
@@ -1501,7 +1501,7 @@ function Start-TeslaVehicleCharging {
         Start-TeslaVehicleCharging -Vehicle 12345678901234567 -Token 1234567890123456789012345678901234567890123456789012345678901234 -ApiUri https://test.mymockteslaapi.com/api
       
         .LINK
-                https://github.com/andylyonette/TeslaPSModulePSModulePSModulePSModulePSModulePSModule
+                https://github.com/andylyonette/TeslaPSModule
         
         .OUTPUTS
         <System.Boolean>
@@ -1570,7 +1570,7 @@ function Start-TeslaVehicleClimateControl {
         Start-TeslaVehicleClimateControl -Vehicle 12345678901234567 -Token 1234567890123456789012345678901234567890123456789012345678901234 -ApiUri https://test.mymockteslaapi.com/api
       
         .LINK
-                https://github.com/andylyonette/TeslaPSModulePSModulePSModulePSModulePSModulePSModule
+                https://github.com/andylyonette/TeslaPSModule
         
         .OUTPUTS
         <System.Boolean>
@@ -1639,7 +1639,7 @@ function Stop-TeslaVehicleCharging {
         Stop-TeslaVehicleCharging -Vehicle 12345678901234567 -Token 1234567890123456789012345678901234567890123456789012345678901234 -ApiUri https://test.mymockteslaapi.com/api
       
         .LINK
-                https://github.com/andylyonette/TeslaPSModulePSModulePSModulePSModulePSModulePSModule
+                https://github.com/andylyonette/TeslaPSModule
         
         .OUTPUTS
         <System.Boolean>
@@ -1708,7 +1708,7 @@ function Stop-TeslaVehicleClimateControl {
         Stop-TeslaVehicleClimateControl -Vehicle 12345678901234567 -Token 1234567890123456789012345678901234567890123456789012345678901234 -ApiUri https://test.mymockteslaapi.com/api
       
         .LINK
-                https://github.com/andylyonette/TeslaPSModulePSModulePSModulePSModulePSModulePSModule
+                https://github.com/andylyonette/TeslaPSModule
         
         .OUTPUTS
         <System.Boolean>
@@ -1777,7 +1777,7 @@ function Unlock-TeslaVehicle {
         Unlock-TeslaVehicle -Vehicle 12345678901234567 -Token 1234567890123456789012345678901234567890123456789012345678901234 -ApiUri https://test.mymockteslaapi.com/api
       
         .LINK
-                https://github.com/andylyonette/TeslaPSModulePSModulePSModulePSModulePSModulePSModule
+                https://github.com/andylyonette/TeslaPSModule
         
         .OUTPUTS
         <System.Boolean>
