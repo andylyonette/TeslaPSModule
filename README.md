@@ -1,4 +1,4 @@
-# Tesla PowerShell Module 1.0.1
+# Tesla PowerShell Module 1.0.2
 Interact with your Tesla Model S, X or 3 using PowerShell over the Tesla customer API
 
 ## Prerequisites
@@ -88,6 +88,9 @@ Eg. `Get-Help Set-TeslaVehicleClimateControlTemprature -Detailed` or `Get-Help S
 
 
 ## Change Log
+### 1.0.2
+* Fixed a bug stopping the Enable-TeslaVehicleValetMode with the -pin parameter from starting
+
 ### 1.0.1
 * Updated spelling mistake in content-based help as per issue #1
 
