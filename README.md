@@ -15,14 +15,14 @@ PowerShell 3.0
 
 ## Usage
 ### Connecting to Tesla
-In order to retrieve data and send commands to a Tesla vehicle each time you open a new PowerShell session you first need to tet a token from the Tesla customer API OATH service and get the ID used by the API to identify the vehicle you wish to affect.  This can be achieved with the following commands:
+In order to retrieve data and send commands to a Tesla vehicle each time you open a new PowerShell session you first need to get a token from the Tesla customer API OATH service and get the ID used by the API to identify the vehicle you wish to affect.  This can be achieved with the following commands:
 
 `$token = Get-TeslaToken -Credential (Get-Credential)`
 
 `$vehicle = Get-TeslaVehicles -Token $token | Where-Object {$_.vin -like "*123456"}`
 
 
-If you only have one active Tesla vehicle in your MyTesla account you just can use :
+If you only have one active Tesla vehicle in your MyTesla account you just can use:
 
 `$token = Get-TeslaToken -Credential (Get-Credential)`
 
@@ -30,7 +30,7 @@ If you only have one active Tesla vehicle in your MyTesla account you just can u
 
 
 ### Vehicle Operations
-All vehicle cmdlets require that the -vehicle and -token paremters are specified, use the $vehicle and $token varibles created above.  Eg. `Invoke-TeslaVehicleLightsFlash -Vehicle $vehicle -Token $token`
+All vehicle cmdlets require that the -vehicle and -token parameters are specified, use the $vehicle and $token variables created above.  E.g. `Invoke-TeslaVehicleLightsFlash -Vehicle $vehicle -Token $token`
 Pipeline support is implemented in each of the cmdlets so you could also use:
 `@{vehicle=$vehicle;token=$token} | Invoke-TeslaVehicleLightsFlash`
 
@@ -38,7 +38,7 @@ Pipeline support is implemented in each of the cmdlets so you could also use:
 ### Cmdlet Reference
 The following cmdlets are available in the module complete with full comment-based help.  In order to find out more about any cmdlet use the Get-Help cmdlet.
 
-Eg. `Get-Help Set-TeslaVehicleClimateControlTemprature -Detailed` or `Get-Help Set-TeslaVehicleClimateControlTemprature -Examples`
+E.g. `Get-Help Set-TeslaVehicleClimateControlTemperature -Detailed` or `Get-Help Set-TeslaVehicleClimateControlTemperature -Examples`
 
 
 #### Vehicle cmdlets
@@ -64,7 +64,7 @@ Eg. `Get-Help Set-TeslaVehicleClimateControlTemprature -Detailed` or `Get-Help S
 * Stop-TeslaVehicleClimateControl
 * Unlock-TeslaVehicle
 
-#### Initialisation cmdlets
+#### Initialization cmdlets
 * Get-TeslaToken
 * Get-TeslaVehicles
 
