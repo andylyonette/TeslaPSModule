@@ -27,7 +27,7 @@
         Invoke-TeslaVehicleCommand -Vehicle 12345678901234567 -Token 1234567890123456789012345678901234567890123456789012345678901234 -Command charge_port_door_close
       
         .EXAMPLE
-        Execute command 'set_temps' with parameters 'driver_temp' and 'passenger_temp' for vehicle with WIN '1232456'.
+        Execute command 'set_temps' with parameters 'driver_temp' and 'passenger_temp' for vehicle with VIN '1232456'.
         
         $token = Get-TeslaToken
         $vehicle = Get-TeslaVehicles -Token $token | Where-Object {$_.vin -eq "5YJSB7E46GF123456"}
@@ -123,7 +123,7 @@ function Close-TeslaVehicleChargePortDoor {
         Close-TeslaVehicleChargePortDoor -Vehicle 12345678901234567 -Token 1234567890123456789012345678901234567890123456789012345678901234
       
         .EXAMPLE
-        The following closes the charge port door on vehicle with WIN '1232456'.
+        The following closes the charge port door on vehicle with VIN '1232456'.
         
         $token = Get-TeslaToken
         $vehicle = Get-TeslaVehicles -Token $token | Where-Object {$_.vin -eq "5YJSB7E46GF123456"}
@@ -192,7 +192,7 @@ function Close-TeslaVehicleSunroof {
         Close-TeslaVehicleSunroof -Vehicle 12345678901234567 -Token 1234567890123456789012345678901234567890123456789012345678901234
       
         .EXAMPLE
-        The following closes the sunroof on vehicle with WIN '1232456'.
+        The following closes the sunroof on vehicle with VIN '1232456'.
         
         $token = Get-TeslaToken
         $vehicle = Get-TeslaVehicles -Token $token | Where-Object {$_.vin -eq "5YJSB7E46GF123456"}
@@ -314,7 +314,7 @@ function Disable-TeslaVehicleValetMode {
         Disable-TeslaVehicleValetMode -Vehicle 12345678901234567 -Token 1234567890123456789012345678901234567890123456789012345678901234
       
         .EXAMPLE
-        The following turns off valet mode for vehicle with WIN '1232456'.
+        The following turns off valet mode for vehicle with VIN '1232456'.
         
         $token = Get-TeslaToken
         $vehicle = Get-TeslaVehicles -Token $token | Where-Object {$_.vin -eq "5YJSB7E46GF123456"}
@@ -386,7 +386,7 @@ function Enable-TeslaVehicleRemoteStart {
         Enable-TeslaVehicleRemoteStart -Vehicle 12345678901234567 -Token 1234567890123456789012345678901234567890123456789012345678901234 -Credential (Get-Credential)
       
         .EXAMPLE
-        The following turns on remote start for vehicle with WIN '1232456'.
+        The following turns on remote start for vehicle with VIN '1232456'.
         
         $credential = Get-credential
         $token = Get-TeslaToken
@@ -467,7 +467,7 @@ function Enable-TeslaVehicleValetMode {
         Enable-TeslaVehicleValetMode -Vehicle 12345678901234567 -Token 1234567890123456789012345678901234567890123456789012345678901234 -Pin 1234
       
         .EXAMPLE
-        The following turns on valet mode for vehicle with WIN '1232456'.
+        The following turns on valet mode for vehicle with VIN '1232456'.
         
         $token = Get-TeslaToken
         $vehicle = Get-TeslaVehicles -Token $token | Where-Object {$_.vin -eq "5YJSB7E46GF123456"}
@@ -700,7 +700,7 @@ function Get-TeslaVehicleSummary {
         Get-TeslaVehicleSummary -Vehicle 12345678901234567 -Token 1234567890123456789012345678901234567890123456789012345678901234
       
         .EXAMPLE
-        Gets vehicle state for vehicle with WIN '1232456'.
+        Gets vehicle state for vehicle with VIN '1232456'.
         
         $token = Get-TeslaToken
         $vehicle = Get-TeslaVehicles -Token $token | Where-Object {$_.vin -eq "5YJSB7E46GF123456"}
@@ -786,7 +786,7 @@ function Invoke-TeslaVehicleHorn {
         Invoke-TeslaVehicleHorn -Vehicle 12345678901234567 -Token 1234567890123456789012345678901234567890123456789012345678901234
       
         .EXAMPLE
-        The following honks the horn for vehicle with WIN '1232456'.
+        The following honks the horn for vehicle with VIN '1232456'.
         
         $token = Get-TeslaToken
         $vehicle = Get-TeslaVehicles -Token $token | Where-Object {$_.vin -eq "5YJSB7E46GF123456"}
@@ -855,7 +855,7 @@ function Invoke-TeslaVehicleLightsFlash {
         Invoke-TeslaVehicleLightsFlash -Vehicle 12345678901234567 -Token 1234567890123456789012345678901234567890123456789012345678901234
       
         .EXAMPLE
-        The following Flashes the lights for vehicle with WIN '1232456'.
+        The following Flashes the lights for vehicle with VIN '1232456'.
         
         $token = Get-TeslaToken
         $vehicle = Get-TeslaVehicles -Token $token | Where-Object {$_.vin -eq "5YJSB7E46GF123456"}
@@ -924,7 +924,7 @@ function Invoke-TeslaVehicleWakeUp {
         Invoke-TeslaVehicleWakeUp -Vehicle 12345678901234567 -Token 1234567890123456789012345678901234567890123456789012345678901234
       
         .EXAMPLE
-        The following initiates a wakeup for vehicle with WIN '1232456'.
+        The following initiates a wakeup for vehicle with VIN '1232456'.
         
         $token = Get-TeslaToken
         $vehicle = Get-TeslaVehicles -Token $token | Where-Object {$_.vin -eq "5YJSB7E46GF123456"}
@@ -993,7 +993,7 @@ function Lock-TeslaVehicle {
         Lock-TeslaVehicle -Vehicle 12345678901234567 -Token 1234567890123456789012345678901234567890123456789012345678901234
       
         .EXAMPLE
-        Locks vehicle with WIN '1232456'.
+        Locks vehicle with VIN '1232456'.
         
         $token = Get-TeslaToken
         $vehicle = Get-TeslaVehicles -Token $token | Where-Object {$_.vin -eq "5YJSB7E46GF123456"}
@@ -1062,7 +1062,7 @@ function Open-TeslaVehicleChargePortDoor {
         Open-TeslaVehicleChargePortDoor -Vehicle 12345678901234567 -Token 1234567890123456789012345678901234567890123456789012345678901234
       
         .EXAMPLE
-        The following opens the charge port door on vehicle with WIN '1232456'.
+        The following opens the charge port door on vehicle with VIN '1232456'.
         
         $token = Get-TeslaToken
         $vehicle = Get-TeslaVehicles -Token $token | Where-Object {$_.vin -eq "5YJSB7E46GF123456"}
@@ -1131,7 +1131,7 @@ function Open-TeslaVehicleSunroofVent {
         Open-TeslaVehicleSunroofVent -Vehicle 12345678901234567 -Token 1234567890123456789012345678901234567890123456789012345678901234
       
         .EXAMPLE
-        The following vents the sunroof on vehicle with WIN '1232456'.
+        The following vents the sunroof on vehicle with VIN '1232456'.
         
         $token = Get-TeslaToken
         $vehicle = Get-TeslaVehicles -Token $token | Where-Object {$_.vin -eq "5YJSB7E46GF123456"}
@@ -1200,7 +1200,7 @@ function Remove-TeslaVehicleValetModePin {
         Remove-TeslaVehicleValetModePin -Vehicle 12345678901234567 -Token 1234567890123456789012345678901234567890123456789012345678901234
       
         .EXAMPLE
-        Removes the valet mode pin from vehicle with WIN '1232456'.
+        Removes the valet mode pin from vehicle with VIN '1232456'.
         
         $token = Get-TeslaToken
         $vehicle = Get-TeslaVehicles -Token $token | Where-Object {$_.vin -eq "5YJSB7E46GF123456"}
@@ -1272,7 +1272,7 @@ function Set-TeslaVehicleChargeLimit {
         Set-TeslaVehicleChargeLimit -Vehicle 12345678901234567 -Token 1234567890123456789012345678901234567890123456789012345678901234 -ChargeLimit 50
       
         .EXAMPLE
-        Sets the charge limit to 75% for vehicle with WIN '1232456'.
+        Sets the charge limit to 75% for vehicle with VIN '1232456'.
         
         $token = Get-TeslaToken
         $vehicle = Get-TeslaVehicles -Token $token | Where-Object {$_.vin -eq "5YJSB7E46GF123456"}
@@ -1351,7 +1351,7 @@ function Set-TeslaVehicleClimateControlTemperature {
         Set-TeslaVehicleClimateControlTemperature -Vehicle 12345678901234567 -Token 1234567890123456789012345678901234567890123456789012345678901234 -DriverTemp 20
       
         .EXAMPLE
-        Sets the driver-side temperature to 20 degrees Celsius and passenger-side temperature to 78 degrees Fahrenheit for vehicle with WIN '1232456'.
+        Sets the driver-side temperature to 20 degrees Celsius and passenger-side temperature to 78 degrees Fahrenheit for vehicle with VIN '1232456'.
         
         $token = Get-TeslaToken
         $vehicle = Get-TeslaVehicles -Token $token | Where-Object {$_.vin -eq "5YJSB7E46GF123456"}
@@ -1489,7 +1489,7 @@ function Start-TeslaVehicleCharging {
         Start-TeslaVehicleCharging -Vehicle 12345678901234567 -Token 1234567890123456789012345678901234567890123456789012345678901234
       
         .EXAMPLE
-        Start charging vehicle with WIN '1232456'.
+        Start charging vehicle with VIN '1232456'.
         
         $token = Get-TeslaToken
         $vehicle = Get-TeslaVehicles -Token $token | Where-Object {$_.vin -eq "5YJSB7E46GF123456"}
@@ -1558,7 +1558,7 @@ function Start-TeslaVehicleClimateControl {
         Start-TeslaVehicleClimateControl -Vehicle 12345678901234567 -Token 1234567890123456789012345678901234567890123456789012345678901234
       
         .EXAMPLE
-        Start HVAC for vehicle with WIN '1232456'.
+        Start HVAC for vehicle with VIN '1232456'.
         
         $token = Get-TeslaToken
         $vehicle = Get-TeslaVehicles -Token $token | Where-Object {$_.vin -eq "5YJSB7E46GF123456"}
@@ -1627,7 +1627,7 @@ function Stop-TeslaVehicleCharging {
         Stop-TeslaVehicleCharging -Vehicle 12345678901234567 -Token 1234567890123456789012345678901234567890123456789012345678901234
       
         .EXAMPLE
-        Stop charging for vehicle with WIN '1232456'.
+        Stop charging for vehicle with VIN '1232456'.
         
         $token = Get-TeslaToken
         $vehicle = Get-TeslaVehicles -Token $token | Where-Object {$_.vin -eq "5YJSB7E46GF123456"}
@@ -1696,7 +1696,7 @@ function Stop-TeslaVehicleClimateControl {
         Stop-TeslaVehicleClimateControl -Vehicle 12345678901234567 -Token 1234567890123456789012345678901234567890123456789012345678901234
       
         .EXAMPLE
-        Stop HVAC for vehicle with WIN '1232456'.
+        Stop HVAC for vehicle with VIN '1232456'.
         
         $token = Get-TeslaToken
         $vehicle = Get-TeslaVehicles -Token $token | Where-Object {$_.vin -eq "5YJSB7E46GF123456"}
@@ -1765,7 +1765,7 @@ function Unlock-TeslaVehicle {
         Unlock-TeslaVehicle -Vehicle 12345678901234567 -Token 1234567890123456789012345678901234567890123456789012345678901234
       
         .EXAMPLE
-        Unlock vehicle with WIN '1232456'.
+        Unlock vehicle with VIN '1232456'.
         
         $token = Get-TeslaToken
         $vehicle = Get-TeslaVehicles -Token $token | Where-Object {$_.vin -eq "5YJSB7E46GF123456"}
