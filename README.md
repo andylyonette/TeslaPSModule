@@ -7,7 +7,7 @@ PowerShell 3.0
 
 
 ## Installation
-1. Create folder C:\Users\\<username>\Documents\WindowsPowerShell\Modules\Tesla
+1. Create folder C:\Users\\[username]\Documents\WindowsPowerShell\Modules\Tesla
 2. Copy Tesla\Tesla.ps1 and Tesla\Tesla.psm1 into that directory.
 3. Unblock Tesla.ps1 and Tesla.psm1 by right clicking each file and going to properties or using the cmdlet 'Unlock-File'
 
