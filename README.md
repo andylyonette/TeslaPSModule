@@ -7,7 +7,7 @@ PowerShell 3.0
 
 
 ## Installation
-1. Create folder C:\Users\<username>\Documents\WindowsPowerShell\Modules\Tesla
+1. Create folder C:\Users\\<username>\Documents\WindowsPowerShell\Modules\Tesla
 2. Copy Tesla\Tesla.ps1 and Tesla\Tesla.psm1 into that directory.
 3. Unblock Tesla.ps1 and Tesla.psm1 by right clicking each file and going to properties or using the cmdlet 'Unlock-File'
 
@@ -38,15 +38,7 @@ Pipeline support is implemented in each of the cmdlets so you could also use:
 ### Cmdlet Reference
 The following cmdlets are available in the module complete with full comment-based help.  In order to find out more about any cmdlet use the Get-Help cmdlet.
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 Eg. `Get-Help Set-TeslaVehicleClimateControlTemperature -Detailed` or `Get-Help Set-TeslaVehicleClimateControlTemperature -Examples`
-=======
-E.g. `Get-Help Set-TeslaVehicleClimateControlTemperature -Detailed` or `Get-Help Set-TeslaVehicleClimateControlTemperature -Examples`
->>>>>>> 66dc56146c8d348e4faf0aefeeb96041905d1477
-=======
-E.g. `Get-Help Set-TeslaVehicleClimateControlTemperature -Detailed` or `Get-Help Set-TeslaVehicleClimateControlTemperature -Examples`
->>>>>>> 66dc56146c8d348e4faf0aefeeb96041905d1477
 
 
 #### Vehicle cmdlets
