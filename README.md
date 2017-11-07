@@ -1,6 +1,9 @@
 # Tesla PowerShell Module 2.0.0
 Interact with your Tesla Model S, X or 3 using PowerShell over the Tesla customer API
 
+## Author
+Andy Lyonette
+
 ## Prerequisites
 PowerShell 3.0
 
@@ -30,8 +33,7 @@ If you only have one active Tesla vehicle in your MyTesla account you just can u
 
 
 ### Vehicle Operations
-All vehicle cmdlets require that the -vehicle and -token parameters are specified, use the $vehicle and $token variables created above.  E.g. `Invoke-TeslaVehicleLightsFlash -Vehicle $vehicle -Token $token`
-Pipeline support is implemented in each of the cmdlets so you could also use:
+All vehicle cmdlets require that the -vehicle and -token parameters are specified, use the $vehicle and $token variables created above.  E.g. `Invoke-TeslaVehicleLightsFlash -Vehicle $vehicle -Token $token`.  Pipeline support is implemented in each of the cmdlets so you can also pass the parameters as a hashtable:
 `@{vehicle=$vehicle;token=$token} | Invoke-TeslaVehicleLightsFlash`
 
 
