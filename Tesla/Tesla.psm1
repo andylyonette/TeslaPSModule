@@ -1,5 +1,4 @@
-<<<<<<< HEAD:Tesla/Tesla.psm1
-﻿function Invoke-TeslaVehicleCommand {
+function Invoke-TeslaVehicleCommand {
     <#
         .SYNOPSIS
         Executes a command against a Tesla vehicle.
